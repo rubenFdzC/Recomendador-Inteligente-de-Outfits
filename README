@@ -1,0 +1,66 @@
+# Sistema de Recomendación de Outfits Basado en Deep Learning
+
+Este proyecto implementa un sistema de recomendación de outfits utilizando redes neuronales convolucionales (CNN) y técnicas de Deep Learning. El objetivo es clasificar imágenes de prendas y sugerir opciones similares basadas en características visuales y atributos.
+
+---
+
+## **Tabla de Contenidos**
+1. [Descripción](#descripción)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Instalación y Configuración](#instalación-y-configuración)
+4. [Uso](#uso)
+5. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+6. [Contribuciones](#contribuciones)
+7. [Licencia](#licencia)
+
+---
+
+## **Descripción**
+El sistema clasifica imágenes de prendas en categorías predefinidas y sugiere recomendaciones personalizadas. Utiliza el dataset [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) para entrenar un modelo de clasificación, y un enfoque de filtrado basado en contenido para generar recomendaciones.
+
+**Características:**
+- Clasificación de imágenes en categorías como camisetas, pantalones, vestidos, etc.
+- Análisis de colores dominantes en las prendas.
+- Generación de recomendaciones basadas en similitudes visuales.
+
+---
+
+## **Estructura del Proyecto**
+
+```plaintext
+project/
+│
+├── data/                 # Datos crudos y preprocesados
+│   ├── raw/              # Archivos descargados (dataset original)
+│   ├── processed/        # Archivos preprocesados (listos para entrenar)
+│
+├── models/               # Modelos entrenados y configuraciones
+│   ├── outfit_classifier.h5  # Modelo de clasificación
+│   ├── recommender.pkl       # Configuración del recomendador
+│
+├── notebooks/            # Notebooks de experimentación
+│   ├── 01-data-preprocessing.ipynb
+│   ├── 02-model-training.ipynb
+│   ├── 03-evaluation.ipynb
+│
+├── app/                  # Interfaz de usuario
+│   ├── app.py            # Interfaz principal con Streamlit
+│
+├── main.py               # Flujo principal del proyecto
+├── README.md             # Documentación del proyecto
+├── requirements.txt      # Dependencias
+└── setup.py              # Configuración del paquete (opcional)
+
+## ** Instalación y configuración **
+Crear un Entorno Virtual
+    python -m venv env
+source env/bin/activate   
+
+Instalar Dependencias
+Copiar código
+pip install -r requirements.txt
+
+Tecnologías utilizadas 
+Librerías de Python: TensorFlow, Keras, OpenCV, Scikit-learn, Matplotlib, Streamlit.
+Dataset: DeepFashion.
+Frameworks: Streamlit para la interfaz de usuario.
